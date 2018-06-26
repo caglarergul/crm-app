@@ -1,0 +1,45 @@
+<table class="ui orange table">
+
+    <tbody>
+        <tr>
+            <td width="200px">First Name</td>
+            <td>{{users.name.first}}</td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td>{{users.name.last}}</td>
+        </tr>
+        <tr>
+            <td>Birthday</td>
+            <td>{{users.birthday}}</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td *ngIf='users.gender=="m";else other_content'>Man</td>
+        </tr>
+        <tr>
+            <td>Last Contact</td>
+            <td>{{users.lastContact}}</td>
+        </tr>
+        <tr>
+            <td>Customer Lifetime Value</td>
+            <td>{{users.customerLifetimeValue}}</td>
+        </tr>
+
+    </tbody>
+    <tfoot class="full-width">
+        <tr>
+
+            <td colspan="2">
+                <a class="ui right floated small green labeled icon button" routerLink="/update/{{users._id}}">
+                    <i class="user icon"></i> Update Info
+                </a>
+
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+<ng-template #other_content>
+    <td>Woman</td>
+</ng-template>

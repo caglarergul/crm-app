@@ -1,0 +1,20 @@
+<table class="ui celled table">
+    <thead>
+        <th>Name</th>
+        <th>Last Name</th>
+        <th>Last Contact</th>
+        <th width="40px">Details</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.name.first}}</td>
+            <td>{{user.name.last}}</td>
+            <td>{{user.lastContact}}</td>
+            <td>
+                <a routerLink="/details/{{user._id}}" class="ui tiny icon green button">
+                    <i class="icon user"></i>
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
