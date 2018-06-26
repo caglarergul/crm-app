@@ -7,8 +7,8 @@ import {ShowComponent} from './show/show.component';
 import {CreateComponent} from './create/create.component';
 import {UpdateComponent} from './update/update.component';
 import {DeleteComponent} from './delete/delete.component';
-import { DetailsComponent } from './details/details.component';
-
+import {DetailsComponent} from './details/details.component';
+import { CreateService } from './create/create.service';
 const routes : Routes = [
   {
     path: "",
@@ -20,9 +20,9 @@ const routes : Routes = [
     path: "create",
     component: CreateComponent
   }, {
-  path: "details/:id",
-  component: DetailsComponent
-}, {
+    path: "details/:id",
+    component: DetailsComponent
+  }, {
     path: "update/:id",
     component: UpdateComponent
   }, {
@@ -33,13 +33,17 @@ const routes : Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent, ShowComponent, CreateComponent, UpdateComponent, DeleteComponent,
+    AppComponent,
+    ShowComponent,
+    CreateComponent,
+    UpdateComponent,
+    DeleteComponent,
     DetailsComponent
-],
+  ],
   imports: [
     BrowserModule, HttpClientModule, RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [CreateService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
