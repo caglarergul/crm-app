@@ -2,36 +2,36 @@
 
 <form class="ui form">
     <div class="field">
-      <label>First Name</label>
-      <input type="text" placeholder="First Name" formControlName="firstName" #firstName>
+        <label>First Name</label>
+        <input type="text" placeholder="First Name" formControlName="firstName" #firstName>
     </div>
     <div class="field">
-      <label>Last Name</label>
-      <input type="text"  placeholder="Last Name" formControlName="lastName" #lastName>
+        <label>Last Name</label>
+        <input type="text" placeholder="Last Name" formControlName="lastName" #lastName>
     </div>
 
     <div class="field">
         <label>Birthday</label>
         <input type="text" placeholder="Birthday" formControlName="birthDay" #birthDay>
-      </div>
+    </div>
 
-      <div class="field">
+    <div class="field">
         <label>Gender</label>
-        <select  class="ui fluid dropdown" formControlName="gender" #gender>
+        <select class="ui fluid dropdown" formControlName="gender" #gender>
             <option value="m">Man</option>
             <option value="w">Woman</option>
         </select>
-      </div>
+    </div>
 
-      <div class="field">
+    <div class="field">
         <label>Customer Lifetime Value</label>
         <input type="text" placeholder="Customer Lifetime Value" formControlName="customerLifetimeValue" #customerLifetimeValue>
-      </div>
+    </div>
 
-    
-      <div class="ui buttons right floated">
+
+    <div class="ui buttons right floated">
         <button class="ui button">Reset</button>
         <div class="or"></div>
-        <a class="ui positive button" (click)="clickMe(firstName.value, lastName.value, birthDay.value, gender.value, customerLifetimeValue.value)">Save</a>
-      </div>
-  </form>
+        <a class="ui positive button" (click)="createCustomer(firstName.value, lastName.value, birthDay.value, gender.value, customerLifetimeValue.value)">Save</a>
+    </div>
+</form>

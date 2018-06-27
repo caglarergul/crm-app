@@ -9,6 +9,7 @@ import {UpdateComponent} from './update/update.component';
 import {DeleteComponent} from './delete/delete.component';
 import {DetailsComponent} from './details/details.component';
 import { CreateService } from './create/create.service';
+
 const routes : Routes = [
   {
     path: "",

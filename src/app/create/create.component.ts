@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CreateService } from './create.service';
-import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-create',
@@ -18,10 +18,7 @@ export class CreateComponent implements OnInit {
       this.createservice.createCustomer(firstName, lastName, birthDay, gender, customerLifetimeValue);
   }
 
-  clickMe(firstName, lastName, birthDay, gender, customerLifetimeValue) 
-  {
-    console.log("clicked" + firstName, lastName, birthDay, gender, customerLifetimeValue);
-  }
+ 
   ngOnInit() {
   }
 }
