@@ -4,6 +4,7 @@
         <th>Last Name</th>
         <th>Last Contact</th>
         <th width="40px">Details</th>
+        <th width="40px">Delete</th>
     </thead>
     <tbody>
         <tr *ngFor="let user of users">
@@ -15,6 +16,10 @@
                     <i class="icon user"></i>
                 </a>
             </td>
+            <td>
+                
+                <a (click)="deleteCustomer(user._id)" class="ui tiny icon red button"><i class="icon trash"></i></a>
+            </td>
         </tr>
-    </tbody>
+    </tbody> 
 </table>

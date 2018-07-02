@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
+import {DeleteService} from './delete.service';
 
-@Component({
-  selector: 'app-delete',
-  templateUrl: './delete.component.html',
-  styleUrls: ['./delete.component.css']
-})
+@Component({selector: 'app-delete', templateUrl: './delete.component.html', styleUrls: ['./delete.component.css']})
 export class DeleteComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  userParamId;
+  constructor(private deleteService : DeleteService, private route : ActivatedRoute) {
+    this
+      .route
+      .params
+      .subscribe(params => this.userParamId = params);
   }
+
+  deleteCustomer() {
+    this
+      .deleteService
+      .deleteCustomer(this.userParamId);
+  }
+
+  ngOnInit() {this.deleteCustomer();}
 
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CreateService } from './create.service';
-import * as moment from 'moment';
+//import * as moment from 'moment';
 
 @Component({
   selector: 'app-create',

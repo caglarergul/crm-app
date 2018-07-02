@@ -20,9 +20,7 @@ lastContactTime = moment().format("YYYY-MM-DD");
       lastContact : this.lastContactTime
     };
 
-    
-
-    this.http.post(uri, obj).subscribe(res => console.log(res));
+    this.http.post(uri, obj).subscribe(res => setTimeout(function(){ alert("Successfull!");window.location.assign("/show")}, 1000) );
   }
 
 }
